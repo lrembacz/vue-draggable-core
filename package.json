@@ -2,11 +2,11 @@
   "name": "vue-draggable-core",
   "version": "1.0.0",
   "description": "DraggableCore component for VueJs.",
-  "main": "./dist/vue-version.min.js",
+  "main": "./dist/vue-draggable-core.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --content-base ./dev --env=webpack.dev --open --hot --mode development",
-	"dist": "webpack --env=webpack.dist --mode production"
+    "dist": "webpack --env=webpack.dist --mode production"
   },
   "repository": {
     "type": "git",
