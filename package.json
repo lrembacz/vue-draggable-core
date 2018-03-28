@@ -1,0 +1,33 @@
+{
+  "name": "vue-draggable-core",
+  "version": "1.0.0",
+  "description": "DraggableCore component for VueJs.",
+  "main": "./dist/vue-version.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --content-base ./dev --env=webpack.dev --open --hot --mode development",
+	"dist": "webpack --env=webpack.dist --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lrembacz/vue-draggable-core.git"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "author": "Łukasz Rembacz",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "vue": "^2.5.16",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.3.0",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  }
+}
