@@ -1,6 +1,6 @@
 {
   "name": "vue-draggable-core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "DraggableCore component for VueJs.",
   "main": "./dist/vue-draggable-core.min.js",
   "scripts": {
@@ -12,6 +12,11 @@
     "type": "git",
     "url": "https://github.com/lrembacz/vue-draggable-core.git"
   },
+  "keywords": [
+    "vue",
+    "draggable",
+	"vue-draggable-core"
+  ],
   "files": [
     "dist",
     "src"

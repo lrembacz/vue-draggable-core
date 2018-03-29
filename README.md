@@ -20,7 +20,6 @@ import VueDraggableCore from 'vue-draggable-core'
 Vue.component('vue-draggable-core', VueDraggableCore)
 ```
 
-
 # API
 
 ## Props
