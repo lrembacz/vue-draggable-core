@@ -1,9 +1,9 @@
 <template>
     <div :class="classes"
-        @mousedown="onMouseDown"
-        @mouseup="onMouseUp"
-        @touchstart="onTouchStart"
-        @touchstop="onTouchStop"
+         @mousedown="onMouseDown"
+         @mouseup="onMouseUp"
+         @touchstart="onTouchStart"
+         @touchstop="onTouchStop"
          :style="styles"
     >
         <slot></slot>
@@ -55,10 +55,6 @@
                 type: Boolean,
                 default: false
             },
-            enableUserSelectHack: {
-                type: Boolean,
-                default: true
-            },
             grid: {
                 type: Array,
                 default: () => [1,1]
@@ -67,22 +63,22 @@
                 type: String,
                 default: null
             },
-           onStart: {
-               type: Function,
-               default : () => {}
-           },
-           onDrag: {
-               type: Function,
-               default : () => {}
-           },
-           onStop: {
-               type: Function,
-               default : () => {}
-           },
-	   className: {
-               type: String,
-               default: ''
-           }
+            onStart: {
+                type: Function,
+                default : () => {}
+            },
+            onDrag: {
+                type: Function,
+                default : () => {}
+            },
+            onStop: {
+                type: Function,
+                default : () => {}
+            },
+            className: {
+                type: String,
+                default: ''
+            },
         },
         computed: {
             styles() {
@@ -109,8 +105,8 @@
                 }
 
                 if (this.disabled ||
-                (this.handle && !matchesSelectorAndParentsTo(event.target, this.handle, thisNode)) ||
-                (this.cancel && matchesSelectorAndParentsTo(event.target, this.cancel, thisNode))) {
+                    (this.handle && !matchesSelectorAndParentsTo(event.target, this.handle, thisNode)) ||
+                    (this.cancel && matchesSelectorAndParentsTo(event.target, this.cancel, thisNode))) {
                     return;
                 }
                 const {ownerDocument} = thisNode;
