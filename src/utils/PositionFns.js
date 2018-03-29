@@ -21,8 +21,6 @@ export function createCoreData(draggableCore, x, y, lastX, lastY) {
     const isStart = !isNum(lastX);
     const node = draggableCore.$el;
 
-   // console.log(x, y, lastX, lastY);
-
     if (isStart) {
         // If this is our first move, use the x and y as last coords.
         return {
@@ -43,7 +41,6 @@ export function createCoreData(draggableCore, x, y, lastX, lastY) {
 }
 
 export function isNum(num) {
-    console.log('isNum?', typeof num === 'number' && !isNaN(num))
     return typeof num === 'number' && !isNaN(num);
 }
 

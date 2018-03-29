@@ -1,5 +1,5 @@
 <template>
-    <div class="draggable"
+    <div :class="classes"
         @mousedown="onMouseDown"
         @mouseup="onMouseUp"
         @touchstart="onTouchStart"
@@ -12,8 +12,8 @@
 
 <script>
 
-    import {getControlPosition, createCoreData, snapToGrid} from './PositionFns'
-    import {addEvent, getTouchIdentifier, matchesSelectorAndParentsTo, removeEvent} from './domFns'
+    import {getControlPosition, createCoreData, snapToGrid} from './utils/PositionFns'
+    import {addEvent, getTouchIdentifier, matchesSelectorAndParentsTo, removeEvent} from './utils/domFns'
 
     const eventsFor = {
         touch: {
@@ -79,11 +79,21 @@
                type: Function,
                default : () => {}
            },
+	   className: {
+               type: String,
+               default: ''
+           }
         },
         computed: {
             styles() {
                 if (this.noSelection)
                     return { 'user-select': 'none' };
+                else
+                    return {};
+            },
+            classes() {
+                if (this.className)
+                    return { [this.className]: true };
                 else
                     return {};
             }
