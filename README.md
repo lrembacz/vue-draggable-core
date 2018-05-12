@@ -29,6 +29,14 @@ noSelection : {
     type: Boolean,
     default: true,
 },
+noTouchAction : {
+    type: Boolean,
+    default: true,
+},
+touchAction: {
+    type: String,
+    default: 'none',
+}
 allowAnyClick :{
     type: Boolean,
     default: false
@@ -72,6 +80,16 @@ className: {
 ### noSelection
 
 Grants `user-select: none;` style to component.
+
+### noTouchAction
+
+If false, grants`touch-action: none;` style to component. Preventing from scrolling on mobile devices. 
+
+Attention! : Be careful when using this prop. You can make scrolling off on mobile devices.
+
+### touchAction
+
+Define which touchAction are added. Default `none`;
 
 ### allowAnyClick
 

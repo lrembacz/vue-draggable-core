@@ -35,13 +35,21 @@
                 lastX: NaN,
                 lastY: NaN,
                 dragEventFor: eventsFor.mouse,
-                touchIdentifier: null
+                touchIdentifier: null,
             }
         },
         props: {
             noSelection : {
                 type: Boolean,
                 default: true,
+            },
+            noTouchAction : {
+                type: Boolean,
+                default: true,
+            },
+            touchAction: {
+                type: String,
+                default: 'none',
             },
             allowAnyClick :{
                 type: Boolean,
@@ -82,10 +90,10 @@
         },
         computed: {
             styles() {
-                if (this.noSelection)
-                    return { 'user-select': 'none' };
-                else
-                    return {};
+                return {
+                    'touch-action': (this.noTouchAction) ? false : this.touchAction,
+                    'user-select': (this.noSelection) ? 'none' : false
+                }
             },
             classes() {
                 if (this.className)
@@ -132,7 +140,6 @@
                 addEvent(ownerDocument, this.dragEventFor.stop, this.handleDragStop);
             },
             handleDrag: function(event) {
-
                 if (event.type === 'touchmove') event.preventDefault();
 
                 const position = getControlPosition(event,this.touchIdentifier, this);
