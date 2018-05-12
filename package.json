@@ -1,6 +1,6 @@
 {
   "name": "vue-draggable-core",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "DraggableCore component for VueJs.",
   "main": "./dist/vue-draggable-core.min.js",
   "scripts": {
